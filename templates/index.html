@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Travel Assistance</title>
+  </head>
+  <body>
+      <div class="container h-100" style="text-align: center;">
+       <div class="row align-items-center" >
+            <div class="col-md-6 col-sm-12 mx-auto">
+                <img src="{{ url_for('static', filename='aut.png') }}" class="rounded mx-auto d-block" alt="...">
+                <h3>دمو سامانه هوشمند ثبت مشکلات شهری</h3>
+                <h4>AUT - NLPIC</h4>
+            </div>
+        </div>
+        <div class="row align-items-center h-100" >
+            <div class="col-md-6 col-sm-12 mx-auto" style="outline: 0.5rem solid cornflowerblue;">
+                <div class="h-100 justify-content-center">
+                    <div class="chat-container" style="overflow: auto; max-height: 80vh">
+                        <!-- chat messages -->
+                        <div class="chat-message col-md-5 offset-md-7 bot-message">
+                          سلام لطفا در ابتدا فقط مشکل خود را وارد کنید
+                        </div>
+                    </div>
+                    <form id="target">
+                       <input class="input" type="text" value="" placeholder="Enter message..." id="input_message"/>
+                       <input type="submit" hidden>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center" >
+            <div class="col-md-6 col-sm-12 mx-auto">
+                <table class="table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">مشکل</th>
+                      <th scope="col">بخش</th>
+                      <th scope="col">آدرس</th>
+                      <th scope="col">منطقه</th>
+                      <th scope="col">تاریخ</th>
+                    </tr>
+                  </thead>
+                  <tbody class="problem-table">
+                   
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='custom.js')}}"></script>
+  </body>
+</html>
