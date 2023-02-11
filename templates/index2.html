@@ -21,7 +21,7 @@
 <!--Coded With Love By Mutiullah Samim-->
 
 <body>
-    <div class="container-fluid h-100">
+    <div class="container-fluid ">
         <div class="row justify-content-center">
             <div class="col-md-8 col-xl-6">
                 <img src="{{ url_for('static', filename='aut.png') }}" class="rounded mx-auto d-block" alt="...">
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="row justify-content-center h-100">
+        <div class="row justify-content-center">
 
             <div class="col-md-8 col-xl-6 chat">
                 <div class="card">
@@ -87,6 +87,7 @@
                                 <div class="input-group-append">
                                     <span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
                                 </div>
+                                
 
                                 <input type="text" value="" class="form-control type_msg" placeholder="Type your message..." id="input_message" />
                                 <input type="submit" hidden>
@@ -94,6 +95,16 @@
                                 <div class="input-group-append">
                                     <button class="input-group-text send_btn" type="submit" form="target"><i class="fas fa-location-arrow"></i></button>
                                 </div>
+                                <div class="input-group-append">
+                                    
+                                        <button id="recordButton"  class="input-group-text record_btn"><i class="fas fa-circle"></i></button>
+                                   
+                                </div>
+                                <div class="input-group-append">
+                                        <button id="stopButton" class="input-group-text stop_btn" disabled><i class="fas fa-stop"></i></button>
+                                </div>
+
+
                             </div>
                         </form>
 
@@ -102,7 +113,7 @@
             </div>
         </div>
 
-        <div class="row justify-content-center h-100">
+        <div class="row justify-content-center">
             <div class="col-md-8 col-xl-6">
                 <table class="table">
                     <thead class="thead-light">
@@ -123,7 +134,15 @@
             </div>
         </div>
     </div>
+    
+    
+  	<!-- <p><strong>Recordings:</strong></p> -->
+  	<!-- <ol id="recordingsList"></ol> -->
+  	
     <script src="{{ url_for('static', filename='custom2.js')}}"></script>
+    <script src="{{ url_for('static', filename='audio.js')}}"></script>
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+  	
 </body>
 
 </html>

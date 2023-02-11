@@ -1,6 +1,6 @@
 function submit_message(message) {
     $.post( "/send_message", {message: message}, handle_response);
-
+    
     function handle_response(data) {
         // append the bot repsonse to the div
         $('.card-body').append(`
@@ -21,7 +21,7 @@ function submit_message(message) {
                    <tr>
                     <th scope="row"> ${data.ID}</th>
                     <td> ${data.message}</td>
-                    <td> ${data.label}</td>
+                    <td> ${data.lable}</td>
                     <td> ${data.address}</td>
                     <td> ${data.district}</td>
                     <td> ${data.priority}</td>
@@ -74,3 +74,7 @@ $('#target').on('submit', function(e){
     // send the message
     submit_message(input_message)
 });
+
+
+
+

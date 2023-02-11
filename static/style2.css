@@ -58,18 +58,40 @@ border-radius: 0 0 15px 15px !important;
        outline:0px !important;
 }
 .attach_btn{
+pointer-events: none;
 border-radius: 15px 0 0 15px !important;
+background-color: rgba(0,0,0,0.3) !important;
+  border:0 !important;
+  color: white !important;
+}
+.send_btn{
 background-color: rgba(0,0,0,0.3) !important;
   border:0 !important;
   color: white !important;
   cursor: pointer;
 }
-.send_btn{
-border-radius: 0 15px 15px 0 !important;
-background-color: rgba(0,0,0,0.3) !important;
+.record_btn{
+background-color: rgba(0,0,0,0.3);
   border:0 !important;
-  color: white !important;
+  color: white;
   cursor: pointer;
+  margin-left: 5px;
+}
+.record_btn:disabled {
+  pointer-events: none;
+  color: red;
+}
+.stop_btn{
+border-radius: 0 15px 15px 0 !important;
+background-color: rgba(0,0,0,0.3);
+  border:0 !important;
+  color: white;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.stop_btn:disabled {
+  pointer-events: none;
+  background: lightgray;
 }
 .search_btn{
   border-radius: 0 15px 15px 0 !important;
@@ -228,3 +250,7 @@ margin-bottom: 15px !important;
 .problem-table {
 
 }
+
+
+
+
